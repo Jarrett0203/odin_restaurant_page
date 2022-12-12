@@ -1,123 +1,145 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: white;
-    background: url(images/background.jpg) center fixed;
-	background-repeat: no-repeat;
-    background-size: cover;
-    height: 120vh;
+  color: white;
+  background: url(images/background.jpg) center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 :root {
-    --background: rgba(0, 0, 0, 0.8);
-    --lighter: rgba(0, 0, 0, 0.6);
-    --hover: rgba(67, 67, 67, 0.6);
+  --background: rgba(0, 0, 0, 0.8);
+  --lighter: rgba(0, 0, 0, 0.6);
+  --hover: rgba(67, 67, 67, 0.6);
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--background);
-    padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  padding-bottom: 2rem;
 }
 
 .header h1 {
-    font-style: italic;
-    padding: 2rem 0;
+  font-style: italic;
+  padding: 2rem 0;
 }
 
 nav {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .navElement {
-    border: none;
-    background: transparent;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    bottom: 0;
-    padding-bottom: 10px;
-    transition: bottom ease 0.5s;
-    position: relative;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  bottom: 0;
+  padding-bottom: 10px;
+  transition: bottom ease 0.5s;
+  position: relative;
 }
 
 .active {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .navElement:hover {
-    bottom: 5px;
+  bottom: 5px;
 }
 
 .main {
-    display: flex;
-    background: var(--background);
-    margin: 3em auto;
-    max-width: 1200px;
-    justify-content: center;
-    border-radius: 50px;
+  display: flex;
+  background: var(--background);
+  margin: 3em auto;
+  max-width: 1200px;
+  justify-content: center;
+  border-radius: 50px;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    font-size: 26px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-size: 26px;
+  gap: 20px;
 }
 
 .home img {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 .ending {
-    font-style: italic;
+  font-style: italic;
 }
 
 .menuGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 50px;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  gap: 20px;
 }
 
 .menuGridElement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    gap: 20px;
-    background-color: var(--lighter);
-    cursor: pointer;
-    transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+  background-color: var(--lighter);
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .menuGridElement:hover {
-    background-color: var(--hover);
+  background-color: var(--hover);
 }
 
 .foodTitle {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .foodImage {
-    height: 200px;
+  height: 200px;
 }
 
 .foodDescription {
-    font-style: italic;
+  font-style: italic;
+  text-align: center;
+}
+
+.contact {
+    display: grid;
+    width: 70%;
+    padding: 30px;
     text-align: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.address {
+    font-style: italic;
+    font-size: 26px;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 500px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
