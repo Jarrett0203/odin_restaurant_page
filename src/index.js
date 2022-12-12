@@ -3,6 +3,7 @@ import loadMenu from "./menu";
 import loadContact from "./contact";
 
 const content = document.querySelector('.content');
+const navButtons = ['Home', 'Menu', 'Contact'];
 
 function createHeader() { 
     const header = document.createElement('div');
@@ -13,26 +14,17 @@ function createHeader() {
     restaurantName.textContent = 'Ahnenerbe';
 
     const nav = document.createElement('nav');
-    const navHome = document.createElement('button'); 
-    const navMenu = document.createElement('button'); 
-    const navContact = document.createElement('button');
-    
-    navHome.classList.add('navElement', 'active');
-    navMenu.classList.add('navElement');
-    navContact.classList.add('navElement');
-    navHome.id = 'Home';
-    navMenu.id = 'Menu';
-    navContact.id = 'Contact';
-    navHome.textContent = 'Home';
-    navMenu.textContent = 'Menu';
-    navContact.textContent = 'Contact';
-    navHome.addEventListener('click', e => handleNavClick(e.target));
-    navMenu.addEventListener('click', e => handleNavClick(e.target));
-    navContact.addEventListener('click', e => handleNavClick(e.target));
-    
-    nav.appendChild(navHome);
-    nav.appendChild(navMenu);
-    nav.appendChild(navContact);
+    for (let i = 0; i < navButtons.length; i++) {
+        const navButton = document.createElement('button');
+        navButton.classList.add('navElement');
+        navButton.textContent = navButtons[i];
+        navButton.id = navButtons[i];
+        navButton.addEventListener('click', e => handleNavClick(e.target));
+        if (i == 0) {
+            navButton.classList.add('active');
+        }
+        nav.appendChild(navButton);
+    }
 
     header.appendChild(restaurantName);
     header.appendChild(nav);
