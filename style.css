@@ -1,0 +1,84 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 120vh;
+}
+
+:root {
+    --background: rgba(0, 0, 0, 0.8);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    padding-bottom: 2rem;
+}
+
+.header h1 {
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navElement {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    bottom: 0;
+    padding-bottom: 10px;
+    transition: bottom ease 0.5s;
+    position: relative;
+}
+
+.active {
+    border-bottom: 2px solid white;
+}
+
+.navElement:hover {
+    bottom: 5px;
+}
+
+.main {
+    display: flex;
+    background: var(--background);
+    margin: 3em auto;
+    max-width: 1000px;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-size: 26px;
+    gap: 20px;
+}
+
+.home img {
+    border-radius: 10%;
+}
+
+.ending {
+    font-style: italic;
+}
